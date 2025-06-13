@@ -11,12 +11,13 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4" />
-              <span>8 (800) 555-0123</span>
+              <span>8700-911-00-91</span>
             </div>
-            <span>Бесплатная доставка от 3000₽</span>
+            <span>Бесплатная доставка от 15000₸</span>
           </div>
-          <div className="hidden md:block">
-            <span>Пн-Пт: 9:00-18:00, Сб-Вс: 10:00-16:00</span>
+          <div className="hidden md:flex items-center gap-4">
+            <span>700casper@gmail.com</span>
+            <span>Алматы Гагарина 118б</span>
           </div>
         </div>
       </div>

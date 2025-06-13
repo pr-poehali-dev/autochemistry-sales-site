@@ -61,11 +61,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
           <div className="flex items-center gap-2">
             <span className="text-xl font-bold text-gray-900">
-              {price.toLocaleString()}₽
+              {price.toLocaleString()}₸
             </span>
             {oldPrice && (
               <span className="text-sm text-gray-500 line-through">
-                {oldPrice.toLocaleString()}₽
+                {oldPrice.toLocaleString()}₸
               </span>
             )}
           </div>
