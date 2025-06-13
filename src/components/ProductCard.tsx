@@ -1,7 +1,8 @@
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Star, ShoppingCart } from "lucide-react";
+import { Star, ShoppingCart, CreditCard } from "lucide-react";
+import { useState } from "react";
 
 interface ProductCardProps {
   id: number;
@@ -16,6 +17,7 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({
+  id,
   name,
   brand,
   price,
@@ -25,6 +27,18 @@ const ProductCard: React.FC<ProductCardProps> = ({
   image,
   badge,
 }) => {
+  const [isAdded, setIsAdded] = useState(false);
+
+  const handleAddToCart = () => {
+    setIsAdded(true);
+    alert(`${name} добавлен в корзину!`);
+    setTimeout(() => setIsAdded(false), 2000);
+  };
+
+  const handleCardPayment = () => {
+    alert(`Оплата картой для товара: ${name} на сумму ${price}₸`);
+  };
+
   return (
     <Card className="group cursor-pointer hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
       <CardContent className="p-4">
@@ -72,9 +86,23 @@ const ProductCard: React.FC<ProductCardProps> = ({
         </div>
       </CardContent>
 
-      <CardFooter className="p-4 pt-0">
-        <Button className="w-full" size="sm">
-          <ShoppingCart className="w-4 h-4 mr-2" />В корзину
+      <CardFooter className="p-4 pt-0 space-y-2">
+        <Button
+          className={`w-full ${isAdded ? "bg-green-600 hover:bg-green-700" : ""}`}
+          size="sm"
+          onClick={handleAddToCart}
+        >
+          <ShoppingCart className="w-4 h-4 mr-2" />
+          {isAdded ? "Добавлено!" : "В корзину"}
+        </Button>
+        <Button
+          variant="outline"
+          className="w-full"
+          size="sm"
+          onClick={handleCardPayment}
+        >
+          <CreditCard className="w-4 h-4 mr-2" />
+          Оплатить картой
         </Button>
       </CardFooter>
     </Card>

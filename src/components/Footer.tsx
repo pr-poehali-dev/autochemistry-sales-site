@@ -1,6 +1,10 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 const Footer = () => {
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.me/77009110091", "_blank");
+  };
+
   return (
     <footer className="bg-slate-900 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -11,8 +15,8 @@ const Footer = () => {
               🚗 AutoChem
             </div>
             <p className="text-gray-300 mb-4">
-              Профессиональная автохимия и аксессуары для ухода за автомобилем.
-              Работаем с 2015 года.
+              Лучшая компания профессиональной автохимии и аксессуаров для ухода
+              за автомобилем. Работаем с 2015 года.
             </p>
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-sm">
@@ -31,6 +35,12 @@ const Footer = () => {
                 <Clock className="w-4 h-4" />
                 <span>Пн-Пт: 9:00-18:00</span>
               </div>
+              <button
+                onClick={handleWhatsAppClick}
+                className="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg text-sm transition-colors mt-2"
+              >
+                💬 Написать в WhatsApp
+              </button>
             </div>
           </div>
 
@@ -39,34 +49,52 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Каталог</h3>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <a href="#" className="hover:text-blue-400">
+                <button
+                  className="hover:text-blue-400 text-left"
+                  onClick={() => alert("Переход в раздел Автошампуни")}
+                >
                   Автошампуни
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-400">
+                <button
+                  className="hover:text-blue-400 text-left"
+                  onClick={() => alert("Переход в раздел Полироли")}
+                >
                   Полироли
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-400">
+                <button
+                  className="hover:text-blue-400 text-left"
+                  onClick={() => alert("Переход в раздел Воски")}
+                >
                   Воски
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-400">
+                <button
+                  className="hover:text-blue-400 text-left"
+                  onClick={() => alert("Переход в раздел Моторные масла")}
+                >
                   Моторные масла
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-400">
+                <button
+                  className="hover:text-blue-400 text-left"
+                  onClick={() => alert("Переход в раздел Очистители")}
+                >
                   Очистители
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-400">
+                <button
+                  className="hover:text-blue-400 text-left"
+                  onClick={() => alert("Переход в раздел Аксессуары")}
+                >
                   Аксессуары
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -76,34 +104,52 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Клиентам</h3>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <a href="#" className="hover:text-blue-400">
+                <button
+                  className="hover:text-blue-400 text-left"
+                  onClick={() => alert("Информация о доставке и оплате")}
+                >
                   Доставка и оплата
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-400">
+                <button
+                  className="hover:text-blue-400 text-left"
+                  onClick={() => alert("Информация о возврате товара")}
+                >
                   Возврат товара
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-400">
+                <button
+                  className="hover:text-blue-400 text-left"
+                  onClick={() => alert("Информация о гарантиях")}
+                >
                   Гарантии
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-400">
+                <button
+                  className="hover:text-blue-400 text-left"
+                  onClick={() => alert("Публичная оферта")}
+                >
                   Публичная оферта
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-400">
+                <button
+                  className="hover:text-blue-400 text-left"
+                  onClick={() => alert("Политика персональных данных")}
+                >
                   Персональные данные
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-400">
+                <button
+                  className="hover:text-blue-400 text-left"
+                  onClick={() => alert("Контактная информация")}
+                >
                   Контакты
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -116,22 +162,28 @@ const Footer = () => {
                 <div className="text-sm text-gray-300 mb-2">
                   Способы оплаты:
                 </div>
-                <div className="flex gap-2">
-                  <div className="bg-gray-700 px-2 py-1 rounded text-xs">
-                    Visa
+                <div className="flex gap-2 flex-wrap">
+                  <div className="bg-blue-600 px-3 py-1 rounded text-xs">
+                    💳 Visa
                   </div>
-                  <div className="bg-gray-700 px-2 py-1 rounded text-xs">
-                    MC
+                  <div className="bg-red-600 px-3 py-1 rounded text-xs">
+                    💳 MasterCard
                   </div>
-                  <div className="bg-gray-700 px-2 py-1 rounded text-xs">
-                    МИР
+                  <div className="bg-green-600 px-3 py-1 rounded text-xs">
+                    💳 МИР
+                  </div>
+                  <div className="bg-gray-600 px-3 py-1 rounded text-xs">
+                    💰 Наличные
                   </div>
                 </div>
               </div>
               <div>
                 <div className="text-sm text-gray-300 mb-2">Доставка:</div>
-                <div className="text-sm text-gray-400">
-                  СДЭК, Почта России, Курьерская доставка
+                <div className="space-y-1 text-sm text-gray-400">
+                  <div>🚚 Яндекс Курьер</div>
+                  <div>🚗 Indrive доставка</div>
+                  <div>📦 СДЭК</div>
+                  <div>📮 Почта России</div>
                 </div>
               </div>
             </div>
@@ -139,7 +191,9 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
-          <p>&copy; 2024 AutoChem. Все права защищены.</p>
+          <p>
+            &copy; 2024 AutoChem. Лучшая компания автохимии. Все права защищены.
+          </p>
         </div>
       </div>
     </footer>

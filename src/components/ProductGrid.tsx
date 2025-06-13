@@ -10,7 +10,7 @@ const products = [
     rating: 5,
     reviews: 142,
     image:
-      "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1544640070-75d03b4c0215?w=400&h=300&fit=crop&auto=format",
     badge: "ХИТ",
   },
   {
@@ -21,7 +21,7 @@ const products = [
     rating: 4,
     reviews: 89,
     image:
-      "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1609205807107-e8ec2120f9de?w=400&h=300&fit=crop&auto=format",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const products = [
     rating: 5,
     reviews: 67,
     image:
-      "https://images.unsplash.com/photo-1609205807107-e8ec2120f9de?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&auto=format",
     badge: "СКИДКА",
   },
   {
@@ -43,7 +43,7 @@ const products = [
     rating: 5,
     reviews: 234,
     image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=400&h=300&fit=crop&auto=format",
   },
   {
     id: 5,
@@ -53,7 +53,7 @@ const products = [
     rating: 4,
     reviews: 156,
     image:
-      "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&auto=format",
   },
   {
     id: 6,
@@ -63,7 +63,7 @@ const products = [
     rating: 4,
     reviews: 89,
     image:
-      "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1609205807107-e8ec2120f9de?w=400&h=300&fit=crop&auto=format",
   },
 ];
 
